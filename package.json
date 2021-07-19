@@ -6,13 +6,20 @@
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^11.2.7",
     "@testing-library/user-event": "^12.8.3",
+    "ajax-client": "^1.5.7",
+    "bootstrap": "^5.0.2",
+    "concurrently": "^6.2.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
+    "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.3",
+    "socket.io-client": "^4.1.3",
     "web-vitals": "^1.1.2"
   },
   "scripts": {
+    "preinstall": "(cd src/service && npm install)",
     "start": "react-scripts start",
+    "dev": "concurrently \"cd src/service && npm run start\" \"npm run start\"",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
